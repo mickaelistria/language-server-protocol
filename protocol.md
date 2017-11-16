@@ -960,6 +960,11 @@ interface ClientCapabilities {
 	textDocument?: TextDocumentClientCapabilities;
 
 	/**
+	 * Client supports the `client/registerCapability` request from server.
+	 */
+	dynamicRegistration?: Boolean;
+
+	/**
 	 * Experimental client capabilities.
 	 */
 	experimental?: any;
@@ -2789,5 +2794,3 @@ interface RenameParams {
 _Response_:
 * result: `null` | [`WorkspaceEdit`](#workspaceedit) describing the modification to the workspace.
 * error: code and message set in case an exception happens during the rename request.
-
-_Registration Options_: `TextDocumentRegistrationOptions`
